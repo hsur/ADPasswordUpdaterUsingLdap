@@ -14,7 +14,7 @@ class AD:
 
 		ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER)
 		ldap.set_option(ldap.OPT_REFERRALS, 0)
-		self.conn = ldap.initialize(self.server)
+		self.conn = ldap.initialize(server)
 
 	def bind(self, netbiosname, username, password):
 		try:
