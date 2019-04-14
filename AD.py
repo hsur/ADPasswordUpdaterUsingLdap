@@ -26,7 +26,7 @@ class AD:
 			return False
 
 	def get_userdn(self, loginname):
-		filter = "(sAMAccountName=%s)" % (loginname,loginname)
+		filter = "(sAMAccountName=%s)" % (loginname)
 		rt = self.conn.search_s(self.base_dn, ldap.SCOPE_SUBTREE, filter)
 		for (dn,attrs) in rt:
 			if dn:
